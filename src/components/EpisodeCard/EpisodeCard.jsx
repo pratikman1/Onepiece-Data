@@ -5,6 +5,7 @@ import { useEffect } from "react";
 
 const EpisodeCard = () => {
   const [episodes, setEpisodes] = useState([]);
+  const [currPage, setCurrPage] = useState(1);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -20,10 +21,29 @@ const EpisodeCard = () => {
     fetchData();
   }, []);
 
+  // Pagination
+  const pageSize = 10;
+
+  const startIndex = (currPage - 1) * pageSize;
+  const endIndex = startIndex + pageSize;
+//   const currentEpisodes = episodes.slice(startIndex, endIndex);
+
+  const nextPage = () => {
+    if (endIndex < episodes.length) {
+      setCurrPage((prev) => prev + 1);
+    }
+  };
+
+  const prevPage = () => {
+    if (currPage > 1) {
+      setCurrPage((prev) => prev - 1);
+    }
+  };
+
   return (
     <section className="episode-container">
       <div className="episode-grid">
-        {episodes.slice(0,10).map((episode) => (
+        {episodes.slice(startIndex, endIndex).map((episode) => (
           <div className="episode-card" key={episode.id}>
             <div className="episode-image">
               <img
@@ -53,6 +73,18 @@ const EpisodeCard = () => {
             </div>
           </div>
         ))}
+      </div>
+      {/* Pagination */}
+      <div className="pagination">
+        <button onClick={prevPage} disabled={currPage === 1}>
+          ← Previous
+        </button>
+
+        <span>Page {currPage}</span>
+
+        <button onClick={nextPage} disabled={endIndex >= episodes.length}>
+          Next →
+        </button>
       </div>
     </section>
   );

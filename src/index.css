@@ -76,3 +76,37 @@ a {
 .character-container {
   background: #0d0d0d;
 }
+/* Pagination */
+
+.pagination {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.pagination button {
+  padding: 10px 20px;
+  background: #1a1a1a;
+  color: #f5d37b;
+  border: 2px solid #5f4c2e;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.pagination button:hover:not(:disabled) {
+  background: #f5d37b;
+  color: #111;
+}
+
+.pagination button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.pagination span {
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+}

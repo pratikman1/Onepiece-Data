@@ -42,6 +42,7 @@ const DevilFruits = () => {
       <div>
         <DevilFruitCard />
       </div>
+      
     </section>
   );
 };
