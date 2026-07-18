@@ -1,48 +1,43 @@
+import { useState } from "react";
 import DevilFruitCard from "../DevilFruitCard/DevilFruitCard";
 import "./DevilFruits.css";
 
 const DevilFruits = () => {
+  const [selectedType, setSelectedType] = useState("All");
+
   return (
     <section className="fruit-page">
-      <div className="fruit-hero">
-        <div className="hero-content">
-          <span className="subtitle">FORBIDDEN POWER</span>
-
-          <h1>
-            THE DEVIL FRUIT
-            <br />
-            ENCYCLOPEDIA
-          </h1>
-
-          <p>
-            Unlock the mysteries of the cursed fruits. From the common Paramecia
-            to the mythical Zoan, every power comes at the price of the sea's
-            hatred.
-          </p>
-        </div>
-      </div>
+      {/* Hero */}
 
       <div className="filter-section">
         <div className="fruit-tabs">
-          <button className="active">ALL TYPES</button>
-          <button>PARAMECIA</button>
-          <button>LOGIA</button>
-          <button>ZOAN</button>
-        </div>
+          <button
+            className={selectedType === "All" ? "active" : ""}
+            onClick={() => setSelectedType("All")}>
+            ALL TYPES
+          </button>
 
-        {/* Sort box  */}
-        <div className="sort-box">
-          <span>SORT BY:</span>
-          <button>RARENESS ▼</button>
+          <button
+            className={selectedType === "Paramecia" ? "active" : ""}
+            onClick={() => setSelectedType("Paramecia")}>
+            PARAMECIA
+          </button>
+
+          <button
+            className={selectedType === "Logia" ? "active" : ""}
+            onClick={() => setSelectedType("Logia")}>
+            LOGIA
+          </button>
+
+          <button
+            className={selectedType === "Zoan" ? "active" : ""}
+            onClick={() => setSelectedType("Zoan")}>
+            ZOAN
+          </button>
         </div>
-        {/* Sort box bnana hain abhi */}
       </div>
 
-      {/* devil fruit card */}
-      <div>
-        <DevilFruitCard />
-      </div>
-      
+      <DevilFruitCard selectedType={selectedType} />
     </section>
   );
 };
