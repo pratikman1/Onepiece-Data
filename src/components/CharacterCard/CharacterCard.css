@@ -1,0 +1,72 @@
+.character-card-container {
+  padding: 40px;
+  background-color: #0d0d0d;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  /* height: 100%; */
+}
+
+.character-card {
+  width: 320px;
+  background: #d8c8a2;
+  border: 3px solid #9c8457;
+  padding: 12px;
+  box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.4);
+  transition: 0.4s ease;
+  cursor: pointer;
+}
+
+.character-card:hover {
+  transform: translateY(-8px) rotate(-2deg);
+}
+
+.character-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.character-role {
+  margin: 0 0 4px;
+  color: #003366;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+
+.character-card h3 {
+  margin: 0;
+  font-size: 1.3rem;
+}
+
+.character-status {
+  background: #ffd700;
+  color: #111827;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.character-card-body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.character-info p {
+  margin: 6px 0;
+}
+.character-info {
+  color: #000;
+  /* background: red; */
+}
+/* res */
+@media screen and (max-width:768px){
+    .character-card-container{
+        grid-template-columns: 1fr;
+    }
+}

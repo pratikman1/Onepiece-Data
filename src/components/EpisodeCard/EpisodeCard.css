@@ -1,0 +1,111 @@
+.episode-container{
+    width:90%;
+    margin:60px auto;
+}
+
+.episode-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:28px;
+}
+
+.episode-card{
+    background:#edd8a8;
+
+    border:2px solid #9b8458;
+
+    border-radius:4px;
+
+    overflow:hidden;
+
+    transition:.35s;
+}
+
+.episode-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 15px 35px rgba(0,0,0,.35);
+}
+
+.episode-image{
+    position:relative;
+}
+
+.episode-image img{
+    width:100%;
+    height:220px;
+
+    object-fit:cover;
+
+    display:block;
+}
+
+.episode-number{
+    position:absolute;
+
+    top:12px;
+    left:12px;
+
+    background:#141414;
+
+    color:#ffd94c;
+
+    border:2px solid #695dff;
+
+    padding:8px 15px;
+
+    font-weight:700;
+
+    font-size:14px;
+}
+
+.episode-body{
+    padding:22px;
+}
+
+.episode-body h2{
+
+    font-size:2rem;
+
+    color:#2d2207;
+
+    margin-bottom:15px;
+
+    font-weight:800;
+
+    line-height:1.15;
+}
+
+.episode-body p{
+
+    color:#5b4b2d;
+
+    line-height:1.7;
+
+    min-height:120px;
+}
+
+.episode-body button{
+
+    width:100%;
+
+    margin-top:20px;
+
+    padding:14px;
+
+    border:none;
+
+    background:#2d2402;
+
+    color:#ffd94c;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.episode-body button:hover{
+
+    background:#000;
+}

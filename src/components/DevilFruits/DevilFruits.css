@@ -1,0 +1,123 @@
+.fruit-page {
+  /* width: 92%; */
+  /* max-width: 1400px; */
+  /* margin: 60px auto; */
+  /* background: red; */
+  background-color: #113366;
+  padding-top: 3rem;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+/* ================= HERO ================= */
+
+.fruit-hero {
+  background: #0f0f0f;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 10px;
+
+  /* min-height: 500px; */
+
+  display: flex;
+  align-items: center;
+
+  padding: 70px 60px;
+}
+
+.hero-content {
+  width: 45%;
+}
+
+.subtitle {
+  color: #f6d86d;
+  letter-spacing: 8px;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.hero-content h1 {
+  margin: 28px 0;
+  line-height: 0.95;
+  font-weight: 900;
+  color: #ece8e8;
+}
+
+.hero-content p {
+  max-width: 620px;
+  line-height: 1.5;
+  color: #c9d1dc;
+}
+
+/* ================= FILTER ================= */
+
+.filter-section {
+  margin-top: 45px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Tabs */
+
+.fruit-tabs {
+  display: flex;
+  background: #2d2a2a;
+  border: 2px solid rgba(255, 255, 255, 0.15);
+}
+
+.fruit-tabs button {
+  background: transparent;
+  color: #d3dae5;
+  border: none;
+  padding: 20px 40px;
+  cursor: pointer;
+  letter-spacing: 2px;
+  transition: 0.3s;
+}
+
+.fruit-tabs button:hover {
+  background: #353232;
+}
+
+.fruit-tabs button.active {
+  background: #f6d86d;
+  color: #111;
+}
+
+/* Sort */
+
+.sort-box {
+  /* background: green;
+  padding: 15px; */
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.sort-box span {
+  color: #d5dce5;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.sort-box button {
+  background: transparent;
+  border: none;
+
+  color: #f6d86d;
+
+  font-size: 22px;
+  font-weight: 700;
+
+  cursor: pointer;
+}
+/* res */
+@media screen and (max-width: 768px) {
+  .filter-section {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .fruit-tabs button {
+    padding: 10px 20px;
+  }
+}

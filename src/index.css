@@ -1,0 +1,78 @@
+@custom-variant dark (&:where(.dark, .dark *));
+
+@import url("https://fonts.googleapis.com/css2?family=Anybody:ital,wght@0,100..900;1,100..900&family=Manrope:wght@200..800&family=Outfit:wght@100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Tangerine:wght@400;700&family=TikTok+Sans:opsz,wght@12..36,300..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --primary-color: #003366;
+  --secondary-color: #ffb703;
+  --tertiary-color: #1a1a1a;
+}
+
+.text-primary {
+  color: var(--primary-color);
+}
+
+.text-secondary {
+  color: var(--secondary-color);
+}
+
+.text-tertiary {
+  color: var(--tertiary-color);
+}
+
+/* .tertiary-color {
+  color: #f5deb3;
+} */
+body {
+  font-family: "Work Sans", sans-serif;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+  line-height: 1;
+  cursor: pointer;
+}
+.container {
+  background: #1a1a1a;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+.btn {
+  background: #ffd700;
+  color: #fff;
+  padding: 18px 40px;
+  border-radius: 12px;
+  cursor: pointer;
+  border: 0;
+  outline: 0;
+  text-transform: uppercase;
+  transition: transform 0.3s ease;
+}
+
+.btn:hover {
+  transform: translateY(-5px);
+}
+/* Hero Section of Home Page */
+.latestSection-container {
+  background: #1a1a1a;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+.logbook-container {
+  background: #292828;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+.footer-container {
+  background: #1a1a1a;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+.character-container {
+  background: #0d0d0d;
+}
