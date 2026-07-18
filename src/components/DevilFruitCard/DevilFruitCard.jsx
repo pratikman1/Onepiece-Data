@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./DevilFruitCard.css";
 
-const DevilFruitCard = () => {
+const DevilFruitCard = ({selectedType}) => {
   const [fruit, setFruit] = useState([]);
   const [currPage, setCurrPage] = useState(1);
 
@@ -38,10 +38,19 @@ const DevilFruitCard = () => {
     }
   };
 
+//   Filter
+const filteredFruits =
+  selectedType === "All"
+    ? fruit
+    : fruit.filter(
+        (fruit) =>
+          fruit.type?.toLowerCase() === selectedType.toLowerCase()
+      );
+
   return (
     <section>
       <div className="fruit-container">
-        {fruit.slice(startIndex,endIndex).map((fruit) => (
+        {filteredFruits.slice(startIndex,endIndex).map((fruit) => (
           <div className="fruit-card" key={fruit.id}>
             {/* <img src={fruit.filename} alt={fruit.name} className="fruit-image" /> */}
 

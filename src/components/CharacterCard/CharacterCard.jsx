@@ -91,15 +91,16 @@ const CharacterCard = () => {
             <div className="character-card-body">
               <div className="character-info">
                 <p>
-                  <strong>Size:</strong> {data.size}
+                  <strong>Size:</strong> {data.size ? data.size : "Unknown"}
                 </p>
 
                 <p>
-                  <strong>Age:</strong> {data.age}
+                  <strong>Age:</strong> {data.age ? data.age : "Unknown"}
                 </p>
 
                 <p>
-                  <strong>Bounty:</strong> ฿{data.bounty}
+                  <strong>Bounty:</strong> ฿{" "}
+                  {data.bounty ? data.bounty : "Unknown"}
                 </p>
               </div>
 
