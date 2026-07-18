@@ -1,6 +1,7 @@
 import React from "react";
 import "./Footer.css";
 import { FaGithub, FaLinkedin, FaWhatsapp } from "react-icons/fa6";
+import { NavLink } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -32,9 +33,15 @@ const Footer = () => {
       </div>
       {/* Footer right side with social media links */}
       <div className="footer-right">
-        <FaGithub />
-        <FaLinkedin />
-        <FaWhatsapp />
+        <NavLink to="https://github.com/pratikman1">
+          <FaGithub />
+        </NavLink>
+        <NavLink to="https://www.linkedin.com/in/pratik-anand-98a100333/">
+          <FaLinkedin />
+        </NavLink>
+        <NavLink>
+          <FaWhatsapp />
+        </NavLink>
       </div>
     </div>
   );
